@@ -136,7 +136,7 @@ app.post('/api/users/:_id/exercises', async (req, res) => {
       description: exercise.description,
       duration: exercise.duration,
       date: exercise.date.toDateString(),
-      _id: exercise._id
+      _id: savedUser._id
     });
   } catch (err) {
     res.status(500).json({ error: err.message });
